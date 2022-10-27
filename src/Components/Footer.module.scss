@@ -1,0 +1,85 @@
+@use '../styles/mixins';
+
+.Footer {
+  padding: 5rem 0;
+
+  .Container {
+    @include mixins.container(hero);
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: center;
+    row-gap: 5rem;
+  }
+  .Left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .About {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .Slogan {
+      font-size: 1.1rem;
+    }
+    .Copyright {
+      color: #a6a9b1;
+    }
+  }
+  .Right {
+    .Table {
+      display: flex;
+      gap: 3rem;
+      font-weight: 500;
+    }
+    .Column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .RowTitle {
+      color: #a6a9b1;
+      font-size: 1.1rem;
+      padding: 0.5rem 0.5rem;
+    }
+    .RowContent {
+      font-size: 0.95rem;
+    }
+    .Link {
+      padding: 0.7rem 0.78rem;
+
+      border-radius: 0.5rem;
+      display: inline-block;
+      &.CtaLogin {
+        color: #6284ff;
+      }
+      &.CtaSignup {
+        background: #6284ff;
+      }
+      &:hover {
+        background: #2d3a60;
+      }
+    }
+  }
+  @media (max-width: 1020px) {
+    .Container {
+      flex-direction: column;
+    }
+    .Left {
+      gap: 3rem;
+    }
+    .Table {
+      justify-content: space-between;
+    }
+  }
+  @media (max-width: 630px) {
+    .Table {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}

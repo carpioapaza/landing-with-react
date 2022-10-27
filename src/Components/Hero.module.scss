@@ -1,0 +1,97 @@
+@use '../styles/_mixins.scss';
+
+.Hero {
+  color: white;
+  padding: 11.5rem 0;
+
+  .Container {
+    @include mixins.container(hero);
+    display: flex;
+  }
+  .Texts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #fefefe;
+    .Image {
+      width: 250px;
+    }
+    .Title {
+      font-family: 'Manrope', sans-serif;
+
+      font-size: 3rem;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(
+        90.01deg,
+        #ffb21d -42.68%,
+        #ed5572 61.01%,
+        #6284ff 146.51%
+      );
+      font-weight: 800;
+
+      span {
+        color: transparent;
+      }
+    }
+    .Paragraph {
+      color: #a6a9b1;
+      font-size: 1.25rem;
+      line-height: 1.8rem;
+      font-weight: 400;
+    }
+    .Cta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .CtaHero {
+      margin-top: 1.3rem;
+      background-color: #6284ff;
+      padding: 1.2rem 1.5rem;
+      border-radius: 1.2rem;
+      font-weight: 700;
+    }
+    .CtaHero:nth-child(2) {
+      background: transparent;
+      color: #6284ff;
+      &:hover {
+        background: #2d3a60;
+      }
+    }
+  }
+
+  .Figures {
+    background-image: url(https://d33wubrfki0l68.cloudfront.net/7e4eb3455d98e9608730f88b582339de51a96021/33fdf/_nuxt/img/herobackground.d34836f.png);
+    flex: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 1020px) {
+    padding: 8rem 0;
+    .Figures {
+      flex: 0;
+      transform: scale(1.9);
+    }
+  }
+  @media (max-width: 630px) {
+    padding: 7rem 0;
+    .Texts {
+      justify-content: space-between;
+      .Title {
+        font-size: 2.3rem;
+      }
+      .Cta {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0;
+      }
+    }
+  }
+}

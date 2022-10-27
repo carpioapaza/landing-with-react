@@ -1,0 +1,108 @@
+@use '../styles/mixins';
+// .services {
+//   @include mixins.container(hero);
+// }
+
+.Services {
+  background: seagreen;
+  margin: auto;
+  padding-bottom: 11.5rem;
+}
+.Container {
+  color: white;
+  @include mixins.container(hero);
+}
+.Cards {
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  background: red;
+}
+.Card {
+  color: black;
+  background: white;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.CardImg {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 45%;
+}
+.CardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.CardName {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.CardRol {
+  color: #6b6d74;
+  font-size: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.CardComment {
+  line-height: 1.8rem;
+  padding-bottom: 1.5rem;
+  &::before {
+    content: '«';
+    margin-right: 0.3rem;
+    display: inline-block;
+  }
+  &::after {
+    content: '»';
+    margin-left: 0.3rem;
+    display: inline-block;
+  }
+}
+.CardInfo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.CardDate {
+  color: #6b6d74;
+  font-size: 0.9rem;
+}
+.Card:nth-of-type(1) {
+  width: 45%;
+  left: 430px;
+  z-index: 4;
+}
+
+.Card:nth-of-type(2) {
+  width: 45%;
+  left: 543px;
+  top: 224px;
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.Card:nth-of-type(3) {
+  width: 45%;
+  top: 448px;
+  left: 420px;
+  transform: scale(0.8);
+  z-index: 3;
+}
+.Card:nth-of-type(4) {
+  width: 45%;
+  top: 320px;
+  left: 160px;
+  z-index: 1;
+  transform: scale(0.7);
+}
+.Card:nth-of-type(5) {
+  width: 45%;
+  top: 128px;
+  left: 80px;
+  z-index: 2;
+  transform: scale(0.9);
+}

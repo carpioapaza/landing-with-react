@@ -1,0 +1,20 @@
+@mixin breakpoint($size) {
+  @if $size == phone {
+    @media (max-width: 678px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+// mobile 480px
+//tablet 768px
+// laptop 1024 px
+// pc 1328px
+
+// @include breakpoint (tablet){
+
+// }

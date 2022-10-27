@@ -1,0 +1,63 @@
+@use '../styles/mixins';
+.About {
+  padding-bottom: 11.5rem;
+  .Container {
+    @include mixins.container(about);
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: auto;
+  }
+  .Texts {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2rem;
+    text-align: center;
+    max-width: 672px;
+  }
+  .Title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .Paragraph {
+    font-size: 1.5rem;
+
+    color: #a6a9b1;
+    font-family: 'Manrope', sans-serif;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(
+      90.01deg,
+      #ffb21d -42.68%,
+      #ed5572 61.01%,
+      #6284ff 146.51%
+    );
+    font-weight: bold;
+    span {
+      color: transparent;
+    }
+  }
+  .Figure {
+    width: 100%;
+    position: relative;
+    padding-bottom: 20rem;
+
+    .Video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  @media (max-width: 630px) {
+    .Title {
+      font-size: 1.8rem;
+    }
+    .Paragraph {
+      font-size: 1.2rem;
+    }
+  }
+}
